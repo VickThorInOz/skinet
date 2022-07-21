@@ -1,10 +1,11 @@
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top">
-    <img src="/assets/images/logo.png" style="max-height: 70px;" alt="logo">
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom fixed-top"
+        style="background-color: white">
+    <img src="/assets/images/logo.png" style="max-height: 70px;" alt="logo" routerLink="/">
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 text-uppercase" style="font-size: large;">
-      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Shop</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
+      <li><a [routerLink]="['/']"class="nav-link px-2" routerLinkActive="active" data-toggle="tab" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/shop" class="nav-link px-2" routerLinkActive="active" data-toggle="tab">Shop</a></li>
+      <li><a href="#" class="nav-link px-2">Contact</a></li>
     </ul>
 
     <div class="d-flex align-items-center">
