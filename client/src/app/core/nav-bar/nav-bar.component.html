@@ -9,11 +9,11 @@
     </ul>
 
     <div class="d-flex align-items-center">
-        <a class="position-relative">
+        <a routerLink="/basket" class="position-relative me-3">
             <i class="fa fa-shopping-cart fa-2x mr-5 text-dark"></i>
-            <div class="cart-no">5</div>
+            <div class="cart-no me-2" *ngIf="(basket$ | async) as basket">{{basket.items.length}}</div>
         </a>
-        <a class="btn btn-outline-secundary mr-2">Login</a>
-        <a class="btn btn-outline-secundary mr-3">Sign up</a>
+        <a class="btn btn-outline-primary m-2">Login</a>
+        <a class="btn btn-outline-primary mr3">Sign up</a>
     </div>
   </header>
